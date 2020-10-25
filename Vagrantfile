@@ -20,5 +20,7 @@ Vagrant.configure("2") do |config|
 
   config.vm.network "public_network"
   # nastavíme sieť pre túto mašinu, takže moja virtuálka bude mať pridelenú IP adresu z môjho routera, tak isto ako má môj NTB
+  config.vm.provision :shell, :path => "bootstrap.sh"
+
 
 end
